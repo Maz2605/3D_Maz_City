@@ -1,16 +1,9 @@
-using UnityEngine;
+using _Scripts.DesignPattern.Singleton;
 
-public class SceneLoader : MonoBehaviour
+namespace _Scripts.Core.GameManager
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class SceneLoader : Singleton<SceneLoader>
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    
     }
 }

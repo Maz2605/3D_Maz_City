@@ -1,9 +1,10 @@
-using UnityEngine;
-
-public interface IState 
+namespace _Scripts.DesignPattern.StateMachine
 {
-    void Initialize();
-    void Enter();
-    void Execute();
-    void Exit();
+    public interface IState 
+    {
+        void Initialize();
+        void Enter();
+        void Execute();
+        void Exit();
+    }
 }
