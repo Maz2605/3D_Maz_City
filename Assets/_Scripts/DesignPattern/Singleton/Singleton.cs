@@ -2,13 +2,12 @@ using UnityEngine;
 
 namespace _Scripts.DesignPattern.Singleton
 {
-    public class Singleton <T> : MonoBehaviour where T : MonoBehaviour
+    public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         private static T _instance;
         private static readonly object _lock = new object();
-    
-        public static bool DontDestroyOnLoadEnabled { get; set; } = true;
 
+        public static bool DontDestroyOnLoadEnabled { get; set; } = true;
 
         public static T Instance
         {
@@ -18,11 +17,12 @@ namespace _Scripts.DesignPattern.Singleton
                 {
                     if (_instance == null)
                     {
-                        _instance = (T)FindObjectOfType(typeof(T));
+                        // Dùng API mới
+                        _instance = FindAnyObjectByType<T>();
 
-                        if (FindObjectsOfType(typeof(T)).Length > 1)
+                        if (FindObjectsByType<T>(FindObjectsSortMode.None).Length > 1)
                         {
-                            Debug.LogError("There is more than one singleton");
+                            Debug.LogError("[Singleton] More than one instance of " + typeof(T) + " found!");
                             return _instance;
                         }
 
@@ -31,11 +31,10 @@ namespace _Scripts.DesignPattern.Singleton
                             GameObject singleton = new GameObject();
                             _instance = singleton.AddComponent<T>();
                             singleton.name = "[Singleton] " + typeof(T);
-                        
-                            if(DontDestroyOnLoadEnabled)
+
+                            if (DontDestroyOnLoadEnabled)
                                 DontDestroyOnLoad(singleton);
                         }
-                    
                     }
                 }
 
@@ -51,11 +50,11 @@ namespace _Scripts.DesignPattern.Singleton
             }
         }
 
-    
         public virtual void KeepAlive(bool alive)
         {
             DontDestroyOnLoadEnabled = alive;
         }
+
         protected virtual void Awake()
         {
             lock (_lock)
@@ -74,15 +73,15 @@ namespace _Scripts.DesignPattern.Singleton
                     Debug.LogWarning("[Singleton] Duplicate instance of " + typeof(T) + " detected. Destroying new instance.");
                     Destroy(gameObject);
                 }
-            
             }
         }
 
         private void OnDestroy()
         {
-            if(_instance == this)
+            if (_instance == this)
                 _instance = null;
         }
+
         protected virtual void OnDisable()
         {
             if (!Application.isPlaying)
