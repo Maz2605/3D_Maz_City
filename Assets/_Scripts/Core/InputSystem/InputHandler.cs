@@ -56,11 +56,9 @@ namespace _Scripts.Core.InputSystem
             input.Inventory.UpdateState(_inputActionsControls.Player.Inventory);
             input.UseItem.UpdateState(_inputActionsControls.Player.UseItem);
             input.FreeLook.UpdateState(_inputActionsControls.Player.FreeLook);
-            int scroll = 0;
-            if (_inputActionsControls.Player.SwitchWeaponNext.WasPerformedThisFrame()) scroll = +1;
-            if (_inputActionsControls.Player.SwitchWeaponPrev.WasPerformedThisFrame()) scroll = -1;
-            input.SwitchWeapon =
-                scroll; // -1, 0, +1 }
+            
+            var switchWeaponValue = _inputActionsControls.Player.SwitchWeapon.ReadValue<float>();
+            input.SwitchWeapon = switchWeaponValue > 0 ? 1 : switchWeaponValue < 0 ? -1 : 0;
         }
         private void UpdateVehicleInputs()
         {

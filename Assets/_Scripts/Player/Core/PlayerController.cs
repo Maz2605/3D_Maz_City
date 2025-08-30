@@ -14,10 +14,10 @@ namespace _Scripts.Player.Core
                 Debug.Log(InputRouter.Instance.CurrentInputMap);
             }
         
-            if(_inputContext.Jump.Down)
-                Debug.Log("Jump Pressed");
-            if(_inputContext.Jump.Pressed)
-                Debug.Log("Jump Held");
+            if(_inputContext.SwitchWeapon > 0)
+                Debug.Log("Next Weapon");
+            else if(_inputContext.SwitchWeapon < 0)
+                Debug.Log("Previous Weapon");
         }
     }
 }

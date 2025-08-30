@@ -164,22 +164,13 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""SwitchWeaponPrev"",
-                    ""type"": ""Button"",
+                    ""name"": ""SwitchWeapon"",
+                    ""type"": ""Value"",
                     ""id"": ""2776c80d-3c14-4091-8c56-d04ced07a2b0"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""SwitchWeaponNext"",
-                    ""type"": ""Button"",
-                    ""id"": ""b7230bb6-fc9b-4f52-8b25-f5e19cb2c2ba"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""FreeLook"",
@@ -473,7 +464,7 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""3a0a2602-a652-4c93-a477-a596b11d5ae0"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
@@ -522,28 +513,6 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""SecondaryAttack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""cbac6039-9c09-46a1-b5f2-4e5124ccb5ed"",
-                    ""path"": ""<Keyboard>/2"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""SwitchWeaponNext"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e15ca19d-e649-4852-97d5-7fe8ccc44e94"",
-                    ""path"": ""<Gamepad>/dpad/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""SwitchWeaponNext"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -620,7 +589,7 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""SwitchWeaponPrev"",
+                    ""action"": ""SwitchWeapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -631,7 +600,18 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
-                    ""action"": ""SwitchWeaponPrev"",
+                    ""action"": ""SwitchWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5eae6111-9993-4c43-b7d7-2dd0c44bb319"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""SwitchWeapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -682,10 +662,10 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""6f8bbad2-9a9e-47d2-8afb-abd54b580cdf"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/alt"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""FreeLook"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -693,10 +673,10 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""015f6827-c715-4c51-b3e7-a258a9eb4ecd"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/b"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""Inventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -704,7 +684,7 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0b250aa6-847a-480c-b46a-f2cd634750ae"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -715,10 +695,10 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5dd173d8-4f03-4157-8d7d-18f14e826c54"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/v"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""SwitchCamera"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1278,21 +1258,21 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Steering"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""235a3fc7-29e0-4e17-accf-e25ad22bacca"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Throttle"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""f16f4292-ade1-489b-a048-a12f3500f497"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Brake"",
@@ -1314,15 +1294,15 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""VehicleLook"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""609cdb50-6a48-41ad-b5b4-e0f2edf96098"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""OnLook"",
+                    ""name"": ""FreeLook"",
                     ""type"": ""Button"",
                     ""id"": ""4efd2bc5-8ce3-473c-a097-294da2888f2b"",
                     ""expectedControlType"": """",
@@ -1388,19 +1368,19 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""288afeb1-32bd-4c71-99fd-a54ea8ae6623"",
-                    ""path"": """",
+                    ""id"": ""e85b2c87-28f6-4ccf-a37e-5b62f0c19486"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Steering"",
+                    ""action"": ""Throttle"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""e85b2c87-28f6-4ccf-a37e-5b62f0c19486"",
-                    ""path"": """",
+                    ""id"": ""df332a9c-76dd-4ede-af0a-fab5369b93bf"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1411,7 +1391,18 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""73d0687e-1e55-4387-b9b3-6e72af3f8aa4"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Brake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2719f21d-f128-45af-bea1-1fc982a9d409"",
+                    ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1422,10 +1413,10 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f6f5eb1c-bc19-4e81-a36d-fb4aa981eade"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""Handbrake"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1433,7 +1424,7 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""361262f1-26ce-43b7-af96-bc4c2775b8b2"",
-                    ""path"": """",
+                    ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1444,18 +1435,18 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""92d5794b-4914-4b2b-96c9-606c064a25bb"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/alt"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""OnLook"",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""FreeLook"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""170455f7-1fde-4a5b-a383-dbb3bef871d8"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1466,7 +1457,7 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""9abdbd25-34ec-4ef4-a46a-ef2c6c22f246"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/h"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1499,7 +1490,7 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ba1b7e7c-2495-41d6-bf85-8852dc1c73ba"",
-                    ""path"": """",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -1510,13 +1501,79 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a8ce7738-1792-47e9-adcc-2600f85ce26b"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/v"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""SwitchCamera"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""8cb204e7-525f-475c-af5b-8a650f38e346"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steering"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""7e6bb94d-ef91-4a21-8791-4c44387401e7"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Steering"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""7819b759-02ca-4a87-89fe-eb36f20bccc8"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Steering"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""d2a87a13-a18c-4731-9e91-5334eb1e39ad"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steering"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""a8d218a3-f2f0-4a5e-9a31-baded35e3c2e"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Steering"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""9c969450-be21-4d06-9e3f-28d3361b43f0"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""Steering"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -1702,8 +1759,7 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_SecondaryAttack = m_Player.FindAction("SecondaryAttack", throwIfNotFound: true);
-        m_Player_SwitchWeaponPrev = m_Player.FindAction("SwitchWeaponPrev", throwIfNotFound: true);
-        m_Player_SwitchWeaponNext = m_Player.FindAction("SwitchWeaponNext", throwIfNotFound: true);
+        m_Player_SwitchWeapon = m_Player.FindAction("SwitchWeapon", throwIfNotFound: true);
         m_Player_FreeLook = m_Player.FindAction("FreeLook", throwIfNotFound: true);
         m_Player_Inventory = m_Player.FindAction("Inventory", throwIfNotFound: true);
         m_Player_UseItem = m_Player.FindAction("UseItem", throwIfNotFound: true);
@@ -1729,7 +1785,7 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
         m_Vehicle_Brake = m_Vehicle.FindAction("Brake", throwIfNotFound: true);
         m_Vehicle_Handbrake = m_Vehicle.FindAction("Handbrake", throwIfNotFound: true);
         m_Vehicle_VehicleLook = m_Vehicle.FindAction("VehicleLook", throwIfNotFound: true);
-        m_Vehicle_OnLook = m_Vehicle.FindAction("OnLook", throwIfNotFound: true);
+        m_Vehicle_FreeLook = m_Vehicle.FindAction("FreeLook", throwIfNotFound: true);
         m_Vehicle_ExitVehicle = m_Vehicle.FindAction("ExitVehicle", throwIfNotFound: true);
         m_Vehicle_SwitchSeat = m_Vehicle.FindAction("SwitchSeat", throwIfNotFound: true);
         m_Vehicle_Horn = m_Vehicle.FindAction("Horn", throwIfNotFound: true);
@@ -1834,8 +1890,7 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_SecondaryAttack;
-    private readonly InputAction m_Player_SwitchWeaponPrev;
-    private readonly InputAction m_Player_SwitchWeaponNext;
+    private readonly InputAction m_Player_SwitchWeapon;
     private readonly InputAction m_Player_FreeLook;
     private readonly InputAction m_Player_Inventory;
     private readonly InputAction m_Player_UseItem;
@@ -1885,13 +1940,9 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @SecondaryAttack => m_Wrapper.m_Player_SecondaryAttack;
         /// <summary>
-        /// Provides access to the underlying input action "Player/SwitchWeaponPrev".
+        /// Provides access to the underlying input action "Player/SwitchWeapon".
         /// </summary>
-        public InputAction @SwitchWeaponPrev => m_Wrapper.m_Player_SwitchWeaponPrev;
-        /// <summary>
-        /// Provides access to the underlying input action "Player/SwitchWeaponNext".
-        /// </summary>
-        public InputAction @SwitchWeaponNext => m_Wrapper.m_Player_SwitchWeaponNext;
+        public InputAction @SwitchWeapon => m_Wrapper.m_Player_SwitchWeapon;
         /// <summary>
         /// Provides access to the underlying input action "Player/FreeLook".
         /// </summary>
@@ -1962,12 +2013,9 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
             @SecondaryAttack.started += instance.OnSecondaryAttack;
             @SecondaryAttack.performed += instance.OnSecondaryAttack;
             @SecondaryAttack.canceled += instance.OnSecondaryAttack;
-            @SwitchWeaponPrev.started += instance.OnSwitchWeaponPrev;
-            @SwitchWeaponPrev.performed += instance.OnSwitchWeaponPrev;
-            @SwitchWeaponPrev.canceled += instance.OnSwitchWeaponPrev;
-            @SwitchWeaponNext.started += instance.OnSwitchWeaponNext;
-            @SwitchWeaponNext.performed += instance.OnSwitchWeaponNext;
-            @SwitchWeaponNext.canceled += instance.OnSwitchWeaponNext;
+            @SwitchWeapon.started += instance.OnSwitchWeapon;
+            @SwitchWeapon.performed += instance.OnSwitchWeapon;
+            @SwitchWeapon.canceled += instance.OnSwitchWeapon;
             @FreeLook.started += instance.OnFreeLook;
             @FreeLook.performed += instance.OnFreeLook;
             @FreeLook.canceled += instance.OnFreeLook;
@@ -2018,12 +2066,9 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
             @SecondaryAttack.started -= instance.OnSecondaryAttack;
             @SecondaryAttack.performed -= instance.OnSecondaryAttack;
             @SecondaryAttack.canceled -= instance.OnSecondaryAttack;
-            @SwitchWeaponPrev.started -= instance.OnSwitchWeaponPrev;
-            @SwitchWeaponPrev.performed -= instance.OnSwitchWeaponPrev;
-            @SwitchWeaponPrev.canceled -= instance.OnSwitchWeaponPrev;
-            @SwitchWeaponNext.started -= instance.OnSwitchWeaponNext;
-            @SwitchWeaponNext.performed -= instance.OnSwitchWeaponNext;
-            @SwitchWeaponNext.canceled -= instance.OnSwitchWeaponNext;
+            @SwitchWeapon.started -= instance.OnSwitchWeapon;
+            @SwitchWeapon.performed -= instance.OnSwitchWeapon;
+            @SwitchWeapon.canceled -= instance.OnSwitchWeapon;
             @FreeLook.started -= instance.OnFreeLook;
             @FreeLook.performed -= instance.OnFreeLook;
             @FreeLook.canceled -= instance.OnFreeLook;
@@ -2287,7 +2332,7 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Vehicle_Brake;
     private readonly InputAction m_Vehicle_Handbrake;
     private readonly InputAction m_Vehicle_VehicleLook;
-    private readonly InputAction m_Vehicle_OnLook;
+    private readonly InputAction m_Vehicle_FreeLook;
     private readonly InputAction m_Vehicle_ExitVehicle;
     private readonly InputAction m_Vehicle_SwitchSeat;
     private readonly InputAction m_Vehicle_Horn;
@@ -2326,9 +2371,9 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @VehicleLook => m_Wrapper.m_Vehicle_VehicleLook;
         /// <summary>
-        /// Provides access to the underlying input action "Vehicle/OnLook".
+        /// Provides access to the underlying input action "Vehicle/FreeLook".
         /// </summary>
-        public InputAction @OnLook => m_Wrapper.m_Vehicle_OnLook;
+        public InputAction @FreeLook => m_Wrapper.m_Vehicle_FreeLook;
         /// <summary>
         /// Provides access to the underlying input action "Vehicle/ExitVehicle".
         /// </summary>
@@ -2394,9 +2439,9 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
             @VehicleLook.started += instance.OnVehicleLook;
             @VehicleLook.performed += instance.OnVehicleLook;
             @VehicleLook.canceled += instance.OnVehicleLook;
-            @OnLook.started += instance.OnOnLook;
-            @OnLook.performed += instance.OnOnLook;
-            @OnLook.canceled += instance.OnOnLook;
+            @FreeLook.started += instance.OnFreeLook;
+            @FreeLook.performed += instance.OnFreeLook;
+            @FreeLook.canceled += instance.OnFreeLook;
             @ExitVehicle.started += instance.OnExitVehicle;
             @ExitVehicle.performed += instance.OnExitVehicle;
             @ExitVehicle.canceled += instance.OnExitVehicle;
@@ -2441,9 +2486,9 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
             @VehicleLook.started -= instance.OnVehicleLook;
             @VehicleLook.performed -= instance.OnVehicleLook;
             @VehicleLook.canceled -= instance.OnVehicleLook;
-            @OnLook.started -= instance.OnOnLook;
-            @OnLook.performed -= instance.OnOnLook;
-            @OnLook.canceled -= instance.OnOnLook;
+            @FreeLook.started -= instance.OnFreeLook;
+            @FreeLook.performed -= instance.OnFreeLook;
+            @FreeLook.canceled -= instance.OnFreeLook;
             @ExitVehicle.started -= instance.OnExitVehicle;
             @ExitVehicle.performed -= instance.OnExitVehicle;
             @ExitVehicle.canceled -= instance.OnExitVehicle;
@@ -2764,19 +2809,12 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSecondaryAttack(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "SwitchWeaponPrev" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "SwitchWeapon" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnSwitchWeaponPrev(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "SwitchWeaponNext" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnSwitchWeaponNext(InputAction.CallbackContext context);
+        void OnSwitchWeapon(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "FreeLook" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
@@ -2941,12 +2979,12 @@ public partial class @InputActionControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnVehicleLook(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "OnLook" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "FreeLook" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnOnLook(InputAction.CallbackContext context);
+        void OnFreeLook(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "ExitVehicle" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
