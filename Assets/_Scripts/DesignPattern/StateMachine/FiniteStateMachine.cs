@@ -4,25 +4,29 @@ namespace _Scripts.DesignPattern.StateMachine
 {
     public class FiniteStateMachine : MonoBehaviour
     {
-        private IState _currentState;
+        [SerializeField] private BaseState initialState;
+        private BaseState currentState;
 
-    
-        public void Initialize(IState initialState)
+        private void Start()
         {
-            _currentState = initialState;
-            _currentState.Initialize();
-            _currentState.Enter();
+            if (initialState != null)
+            {
+                TransitionToState(initialState);
+            }
         }
-    
-        public void ChangeState(IState newState)
-        {
-            _currentState?.Exit();
-            _currentState = newState;
-            _currentState.Enter();
-        }
+
         private void Update()
         {
-            _currentState?.Execute();
+            currentState?.Execute(this);
+        }
+
+        public void TransitionToState(BaseState newState)
+        {
+            if (newState == null || newState == currentState) return;
+
+            currentState?.OnExit(this);
+            currentState = newState;
+            currentState.OnEnter(this);
         }
     }
 }
