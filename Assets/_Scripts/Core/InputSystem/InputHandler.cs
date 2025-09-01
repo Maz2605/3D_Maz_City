@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace _Scripts.Core.InputSystem
 {
@@ -7,10 +8,18 @@ namespace _Scripts.Core.InputSystem
     {
         [SerializeField] private InputContext input;
         private InputActionControls _inputActionsControls;
+        
+        private InputActionMap _playerMap;
+        private InputActionMap _vehicleMap;
+        private InputActionMap _uiMap;
+        
 
         private void Start()
         {
             _inputActionsControls = InputRouter.Instance.InputActionControls;
+            _playerMap = _inputActionsControls.asset.FindActionMap(ActionMapName.Player.ToString());
+            _vehicleMap = _inputActionsControls.asset.FindActionMap(ActionMapName.Vehicle.ToString());
+            _uiMap = _inputActionsControls.asset.FindActionMap(ActionMapName.Ui.ToString());
         }
 
         private void Update()
