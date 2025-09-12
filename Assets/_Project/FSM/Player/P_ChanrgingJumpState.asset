@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdb20c22282e48b0954caf9f50948ad1, type: 3}
-  m_Name: P_OnFootState
+  m_Script: {fileID: 11500000, guid: 16692a3657564839acde41da8782cf63, type: 3}
+  m_Name: P_ChanrgingJumpState
   m_EditorClassIdentifier: 
-  playerInputReader: {fileID: 11400000, guid: 0b36e083283242a4eb462ca699ce70be, type: 2}
+  minChargeTime: 0.1
+  maxChargeTime: 3

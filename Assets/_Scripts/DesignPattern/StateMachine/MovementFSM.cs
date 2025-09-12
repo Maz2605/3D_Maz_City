@@ -1,5 +1,8 @@
-using _Project.FSM.Player;
+using System;
+using _Scripts.Characters.Player.FSM.States.Movement;
 using _Scripts.DesignPattern.StateMachine;
+using _Scripts.InputSystem.EventManager;
+using _Scripts.InputSystem.Events;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -12,19 +15,23 @@ public class MovementFSM : MonoBehaviour
     public Character Character { get; private set; }
     public CharacterController Controller => Character.Controller;
     public Animator Animator => Character.Anim;
+    public Vector2 CurrentMoveInput { get; private set; }
 
     public Vector3 PlayerVelocity;
     public bool isGrounded;
     private void Awake()
     {
         Character = GetComponent<Character>();
+        
     }
 
     private void OnEnable()
     {
         if (config == null) return;
-        CurrentState = config.InitialState;
+        CurrentState = config.initialState;
         CurrentState.OnEnter(this);
+        
+        EventManager.Instance.Subscribe<MoveInputEvent>(HandleMove);
     }
 
     private void Update()
@@ -41,10 +48,20 @@ public class MovementFSM : MonoBehaviour
         Controller.Move(PlayerVelocity * Time.deltaTime);
     }
 
+    private void OnDisable()
+    {
+        EventManager.Instance.Unsubscribe<MoveInputEvent>(HandleMove);
+    }
+
     public void TransitionToState(BaseState nextState)
     {
         CurrentState?.OnExit(this);
         CurrentState = nextState;
         CurrentState.OnEnter(this);
+    }
+
+    private void HandleMove(MoveInputEvent evt)
+    {
+        CurrentMoveInput = evt.Direction;
     }
 }

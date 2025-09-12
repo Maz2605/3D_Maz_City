@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00259d6052a747ff965949a65592c238, type: 3}
   m_Name: P_MovementFSM_Config
   m_EditorClassIdentifier: 
-  InitialState: {fileID: 11400000, guid: 58605419931bacf47870604fd4764721, type: 2}
-  IdleState: {fileID: 11400000, guid: 58605419931bacf47870604fd4764721, type: 2}
-  WalkState: {fileID: 11400000, guid: d1ed49877e76af54e8da8582fffe2df7, type: 2}
-  RunState: {fileID: 11400000, guid: 0a734eaf099fe5e4caf8ceb0d33a8d6c, type: 2}
-  JumpState: {fileID: 11400000, guid: 77c10db863e62dc49a0306d4d78efab4, type: 2}
+  initialState: {fileID: 11400000, guid: 58605419931bacf47870604fd4764721, type: 2}
+  idleState: {fileID: 11400000, guid: 58605419931bacf47870604fd4764721, type: 2}
+  walkState: {fileID: 11400000, guid: d1ed49877e76af54e8da8582fffe2df7, type: 2}
+  runState: {fileID: 11400000, guid: 0a734eaf099fe5e4caf8ceb0d33a8d6c, type: 2}
+  jumpState: {fileID: 11400000, guid: 77c10db863e62dc49a0306d4d78efab4, type: 2}
+  chargingJumpState: {fileID: 11400000, guid: 0db7b03aabce29f439cb8d2d2f465f4e, type: 2}
